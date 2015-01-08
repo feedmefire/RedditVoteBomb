@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Reddit Vote Bomb",
+  "version": "1.0",
+  "description": "Upvote or Downvote all of the comments on one page of a user's profile!",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs", "http://www.reddit.com/user/*", "https://www.reddit.com/user/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+		"http://www.reddit.com/user/*",
+		"https://www.reddit.com/user/*"
+	  ],
+      "js": ["jquery-2.1.1.min.js", "upvotedownvote.js"],
+	  "run_at": "document_end"
+    }
+  ]
+}
