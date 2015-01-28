@@ -1,26 +1,20 @@
 <!doctype html>
 <html>
   <head>
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
-     -->
 	<script src="jquery-2.1.1.min.js"></script>
     <script src="popup.js"></script>
 	<style type="text/css">
-		.container{width:80px;height:20px;}
-		.upvote{float:left;width:20px;height:100%;background:#ff8b60;}
-		.downvote{float:left;margin-left:10px;width:20px;height:100%;background:#9494ff;}
-		.reset{float:left;margin-left:10px;width:20px;height:100%;background:#c6c6c6;}
+		.container{width:50px;height:20px;}
+		.upvote{float:left;width:20px;height:100%;background-image:url("upvote.png");background-position:20px 0px;}
+		.downvote{float:left;width:20px;height:100%;background-image:url("downvote.png");background-position:20px 0px;}
+		.space{float:left;width:10px;height:100%;}
 	</style>
   </head>
   <body>
 	<div class="container">
 		<div class="upvote"></div>
+		<div class="space"></div>
 		<div class="downvote"></div>
-		<div class="reset"></div>
 	</div>
   </body>
 </html>
